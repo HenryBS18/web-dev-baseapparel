@@ -1,0 +1,125 @@
+@import url('https://fonts.google.com/specimen/Josefin+Sans');
+
+$bg-content: './images/bg-pattern-desktop.svg';
+
+$desaturated-red: hsl(0, 36%, 70%);
+$soft-red: hsl(0, 93%, 68%);
+$dark-grayish-red: hsl(0, 6%, 24%);
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main-body {
+  display: flex;
+  justify-content: space-between;
+  background-image: url($bg-content);
+  background-repeat: no-repeat;
+
+  .content {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+
+    .content-main {
+      width: 46%;
+
+      .image-logo {
+        width: 130px;
+        height: 30px;
+
+        margin-bottom: 60px;
+      }
+
+      .text-1 {
+        color: $desaturated-red;
+        margin: 0;
+        font-size: 48px;
+        font-weight: 100;
+        font-family: 'Josefin Sans', sans-serif;
+      }
+
+      .text-2 {
+        color: black;
+        margin: 0;
+        font-size: 48px;
+        font-weight: bold;
+      }
+
+      .description {
+        color: $desaturated-red;
+        margin-bottom: 32px;
+      }
+
+      .input-email {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 16px;
+
+        position: relative;
+
+        input {
+          width: 296px;
+          border: none;
+          border-radius: 16px 0 0 16px;
+          padding: 0 20px;
+          outline: none;
+        }
+
+        .button-submit {
+          width: 80px;
+          height: 44px;
+          margin-top: -2px;
+          margin-right: -2px;
+          background-color: #f39a9a;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 16px;
+          cursor: pointer;
+
+          .arrow {
+            background-color: #f39a9a;
+            transform: rotate(45deg);
+            width: 10px;
+            height: 10px;
+            border-top: 2px solid white;
+            border-right: 2px solid white;
+          }
+        }
+
+        .error-icon {
+          position: absolute;
+          top: 10px;
+          right: 86px;
+        }
+      }
+
+      .error-text {
+        color: $soft-red;
+        margin-left: 20px;
+        margin-top: 2px;
+      }
+
+      .hidden {
+        visibility: hidden;
+      }
+
+      .border-error {
+        border: 2px solid $soft-red;
+      }
+    }
+  }
+
+  .image-side {
+    height: 100vh;
+  }
+}
